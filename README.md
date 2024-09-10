@@ -10,6 +10,6 @@ Shadcn demo template made with nicegui
 # Run the demo
 
 ```python
-pip install -r requirements.txt
+pip install nicegui
 python mailboxapp.py
 ```
