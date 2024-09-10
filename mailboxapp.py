@@ -55,20 +55,20 @@ def Mail():
             )
             ui.toggle(["All mail", "Unread"]).props("no-caps size=md flat")
 
-    with ui.element().classes("w-full h-full"):
+    with ui.element().classes("w-full  flex"):
         with Header():
             with ui.element().classes("w-full h-full flex justify-between content-center"):
 
                 ui.label("Inbox").classes("font-bold mx-4 text-lg ")
                 ui.toggle(["All mail", "Unread"]).props("no-caps size=md flat").classes("mx-2")
 
-        with ui.element().classes("flex justify-center w-full h-full no-scrollbar "):
-            ui.input("Search...").props("dense outlined").classes("w-full mx-4 my-2")
+        with ui.element().classes("flex  w-full  "):
+            ui.input("Search...").props("dense outlined").classes("w-full mx-2 my-2")
 
-            with ui.scroll_area().classes(" h-full no-scrollbar"):
-                with ui.column():
-                    for i in range(10):
-                        Message()
+        with ui.element().classes("h-full no-scrollbar"):
+            with ui.column():
+                for i in range(4):
+                    Message()
 
 
 def ReadMail():
